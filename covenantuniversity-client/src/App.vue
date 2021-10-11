@@ -1,8 +1,11 @@
 <template>
   <div id="nav">
+    <img alt="Cu logo" src="./assets/Culogo.png" />
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
-    <router-view />
+    <div>
+      <router-view />
+    </div>
   </div>
 </template>
 

@@ -14,5 +14,8 @@
     "cors": "^2.8.5",
     "helmet": "^4.6.0",
     "volleyball": "^1.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
   }
 }
