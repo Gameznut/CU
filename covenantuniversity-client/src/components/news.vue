@@ -4,9 +4,11 @@
       <div
         class="h-10 w-4/12 flex bg-green-600 rounded-tr-full rounded-br-full"
       >
-        <p class="flex mx-auto items-center">Latest News</p>
+        <p class="flex mx-auto items-center text-white text-base">
+          Latest News
+        </p>
       </div>
-      <p class="text-white mx-10">
+      <p class="text-white mx-10 hover:text-green-700 font-semibold text-base">
         Professor Adebayo Seeks Renewed Commitment to Food Security in Nigeria
       </p>
       <div class="flex ml-36">
@@ -42,11 +44,31 @@
         </svg>
       </div>
     </div>
-    <div  class="flex justify-between gap-4">
-      <div v-for="newz in news" :key="newz">
-        <img :src="newz.images" :alt="newz.title" />
-        <h1 class="text-center">{{ newz.title }}</h1>
-        <p class="text-center">{{ newz.text }}</p>
+    <!-- news card -->
+    <div class="flex justify-between gap-6 mt-3 my-4">
+      <div
+        v-for="newz in news"
+        :key="newz"
+        class="flex flex-col justify-between w-3/4 bg-gray-200"
+      >
+        <img class="w-full h-max" :src="newz.images" :alt="newz.title" />
+        <h1 class="text-center text-2xl font-extrabold my-10">
+          {{ newz.title }}
+        </h1>
+        <p class="text-center mx-auto px-20 text-md">{{ newz.text }}</p>
+        <button
+          class="
+            px-3
+            py-2
+            mt-20
+            mx-auto
+            bg-purple-700
+            hover:bg-pink-500
+            rounded-md
+          "
+        >
+          {{ newz.btnTitle }}
+        </button>
       </div>
     </div>
   </div>
@@ -60,19 +82,19 @@ export default {
           title: "GLOBAL RANKING",
           text: "Covenant, the only Nigerian University featured Rises 50 Places to 101-150 in THE Young University Rankings",
           btnTitle: "LEARN MORE >",
-          images: "../assets/rank.jpg",
+          images: require("../assets/1.png"),
         },
         {
-          title: "NOTICE",
+          title: "NOTICE BOARD",
           text: "Important Notifications and announcements to all our students",
           btnTitle: "SEE NOTICE BOARD >",
-          images: "../assets/notice.png",
+          images: require("../assets/2.png"),
         },
         {
           title: "ADMISSION NOW",
           text: "For information that will assist our propective students to study at Covenant",
           btnTitle: "APPLY NOW >",
-          images: "../assets/admission.png",
+          images: require("../assets/3.png"),
         },
       ],
     };
