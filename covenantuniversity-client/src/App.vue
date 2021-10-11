@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="flex justify-between items-center fixed bg-white w-full">
+    <nav class="flex z-50 justify-between items-center fixed bg-white w-full">
       <div>
         <img alt="Cu logo" src="./assets/Culogo.png" />
       </div>
