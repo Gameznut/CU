@@ -1,33 +1,57 @@
 <template>
-  <div id="nav">
-    <img alt="Cu logo" src="./assets/Culogo.png" />
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div>
+    <nav class="flex justify-between items-center fixed bg-white w-full">
+      <div>
+        <img alt="Cu logo" src="./assets/Culogo.png" />
+      </div>
+      <div class="mx-4" v-for="link in links" :key="link.tos">
+        <router-link :to="link.tos">{{ link.name }}</router-link>
+      </div>
+    </nav>
     <div>
       <router-view />
     </div>
   </div>
 </template>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+<script>
+export default {
+  data() {
+    return {
+      links: [
+        {
+          name: "Home",
+          tos: "/",
+        },
+        {
+          name: "About",
+          tos: "about",
+        },
+        {
+          name: "Study",
+          tos: "about",
+        },
+        {
+          name: "Admissions",
+          tos: "about",
+        },
+        {
+          name: "campus life",
+          tos: "about",
+        },
+        {
+          name: "imformation",
+          tos: "about",
+        },
+        {
+          name: "researching & teaching",
+          tos: "about",
+        },
+        {
+          name: "Alumni",
+          tos: "about",
+        },
+      ],
+    };
+  },
+};
+</script>
