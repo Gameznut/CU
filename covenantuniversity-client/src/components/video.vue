@@ -50,7 +50,7 @@
             EXPLORE
           </button>
         </div>
-      <div class="flex-1"></div>
+        <div class="flex-1"></div>
       </div>
     </div>
   </div>

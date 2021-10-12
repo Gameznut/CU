@@ -60,11 +60,12 @@
           class="
             px-3
             py-2
-            mt-20
+            my-16
             mx-auto
             bg-purple-700
             hover:bg-pink-500
             rounded-md
+            font-bold
           "
         >
           {{ newz.btnTitle }}
